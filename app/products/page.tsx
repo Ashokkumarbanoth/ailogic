@@ -1,0 +1,7 @@
+import ProductList from "@/components/productList";
+import { fetchProducts } from "@/lib/api";
+
+export default async function ProductsPage() {
+  const products = await fetchProducts();
+  return <ProductList products={products} />;
+}
